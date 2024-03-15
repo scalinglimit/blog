@@ -21,3 +21,11 @@ app.listen(3000, () => {
 //routes
 app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
+
+//error middleware
+app.use((error, req, res, next) => {
+  console.log(error);
+  const statusCode = error.statusCode || 500;
+  const message = error.message || "internal server error";
+  res.status(statusCode).json({ success: false, statusCode, message });
+});
