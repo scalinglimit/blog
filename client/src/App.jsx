@@ -10,6 +10,7 @@ import Dashbord from "./pages/Dashboard";
 
 //components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/dashboard" element={<Dashbord />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
