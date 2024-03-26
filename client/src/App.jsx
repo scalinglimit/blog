@@ -9,6 +9,7 @@ import SignIn from "./pages/SignIn";
 import Dashbord from "./pages/Dashboard";
 import CreatePost from "./pages/CreatePost";
 import UpdatePost from "./pages/UpdatePost";
+import PostPage from "./pages/PostPage";
 
 //components
 import Header from "./components/Header";
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:postId" element={<UpdatePost />} />
         </Route>
+        <Route path="/post/:postSlug" element={<PostPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
