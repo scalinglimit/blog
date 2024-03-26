@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Spinner, Button } from "flowbite-react";
 import CallToAction from "../components/CallToAction";
+import PostCard from "../components/PostCard";
 
 export default function PostPage() {
   const { postSlug } = useParams();
@@ -88,10 +89,10 @@ export default function PostPage() {
 
       <div className="flex flex-col justify-center items-center mb-5">
         <h1 className="text-xl mt-5">Recent articles</h1>
-        {/* <div className="flex flex-wrap gap-5 mt-5 justify-center">
+        <div className="flex flex-wrap sm:flex-nowrap gap-5 mt-5 justify-center">
           {recentPosts &&
             recentPosts.map((post) => <PostCard key={post._id} post={post} />)}
-        </div> */}
+        </div>
       </div>
     </main>
   );
