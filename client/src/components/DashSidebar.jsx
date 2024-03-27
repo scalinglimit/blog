@@ -4,6 +4,7 @@ import {
   HiUser,
   HiDocumentText,
   HiOutlineUserGroup,
+  HiChartPie,
 } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -45,6 +46,14 @@ export default function DashSidebar() {
     <Sidebar className="w-full md:w-56">
       <Sidebar.Items>
         <Sidebar.ItemGroup>
+          {currentUser.isAdmin && (
+            <Sidebar.Item
+              active={tab === "dash" || !tab}
+              icon={HiChartPie}
+              href={`/dashboard?tab=dash`}>
+              Dashboard
+            </Sidebar.Item>
+          )}
           <Sidebar.Item
             active={tab === "profile"}
             icon={HiUser}
