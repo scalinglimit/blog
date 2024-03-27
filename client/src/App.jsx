@@ -10,6 +10,7 @@ import Dashbord from "./pages/Dashboard";
 import CreatePost from "./pages/CreatePost";
 import UpdatePost from "./pages/UpdatePost";
 import PostPage from "./pages/PostPage";
+import Search from "./pages/Search";
 
 //components
 import Header from "./components/Header";
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/search" element={<Search />} />
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashbord />} />
         </Route>
