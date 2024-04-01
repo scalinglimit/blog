@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Label, TextInput, Button, Alert, Spinner } from "flowbite-react";
+import {
+  Label,
+  TextInput,
+  Button,
+  Alert,
+  Spinner,
+  Modal,
+} from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   signInStart,
@@ -63,6 +70,10 @@ const SignIn = () => {
         {/* Right */}
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-1 my-3 bg-green-500 p-3 rounded-md">
+              <p>email: adminuser@gmail.com</p>
+              <p>password: ashish</p>
+            </div>
             <div>
               <Label value="Your email" />
               <TextInput
