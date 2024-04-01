@@ -70,7 +70,7 @@ const SignIn = () => {
         {/* Right */}
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-1 my-3 bg-green-500 p-3 rounded-md">
+            <div className="flex flex-col gap-1 my-3 bg-green-500 p-3 rounded-md text-white">
               <p>email: adminuser@gmail.com</p>
               <p>password: ashish</p>
             </div>

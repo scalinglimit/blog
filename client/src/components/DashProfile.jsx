@@ -22,7 +22,7 @@ import {
   deleteUserSuccess,
   deleteUserFailure,
   signoutSuccess,
-} from "../../../../mern-blog/client/src/redux/user/userSlice";
+} from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 
